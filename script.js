@@ -26,7 +26,7 @@ function createSquares(number) {
       } else {
         square.style.cssText = "border: 1px solid black; height: 25px; width: 25px";
         square.addEventListener('mousemove', () => {
-          square.style.backgroundColor = 'blue';
+          square.style.backgroundColor = getRandomColor();
         })
       }
       }
@@ -66,7 +66,15 @@ function createSquares(number) {
      })
   }
 
-
+function getRandomColor() {
+  const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+  const r = randomBetween(0, 255);
+  const g = randomBetween(0, 255);
+  const b = randomBetween(0, 255);
+  const rgb = `rgb(${r},${g},${b})`
+  return rgb;
+ 
+}
 
 
 createSquares(16);
