@@ -4,32 +4,30 @@ const container = document.querySelector('.container');
 // container.insertBefore(btn, square);
 function createSquares(number) {
     
-  //   container.style.overflow = "hidden";
-  //   // container.style.width = "960px";
-  //   const total = (number * number) + number;
-  //   const mod = number + 1;
-  //  // yes using grid would be a lot earlier, but one must flex one's flexbox's skills
-  //   for (let i = 1; i < total; i++) {
-  //     const square = document.createElement('div');
-  //     container.appendChild(square).className = 'boxes';
+    container.style.overflow = "hidden";
+    // container.style.width = "960px";
+    const total = (number * number) + number;
+    const mod = number + 1;
+   // yes using grid would be a lot earlier, but one must flex one's flexbox's skills
+    for (let i = 1; i < total; i++) {
+      const square = document.createElement('div');
+      container.appendChild(square).className = 'boxes';
       
 
-  //     // square.classList.add('boxes')
+      square.classList.add('boxes')
 
       
       
 
   
-  //     if (i % mod === 0) {
-  //       square.style.cssText = "border: 0; height: 0; width: 100%";
-  //     } else {
-  //       square.style.cssText = "border: 1px solid black; height: 25px; width: 25px";
-  //       square.addEventListener('mousemove', () => {
-  //         square.style.backgroundColor = 'blue';
-  //       })
-  //     }
-  //     }
-  //     }
+      if (i % mod === 0) {
+        square.style.cssText = "border: 0; height: 0; width: 100%";
+      } else {
+        square.style.cssText = "border: 1px solid black; height: 25px; width: 25px";
+        
+      }
+      }
+      }
   
   
   // function getRandomColor() {
