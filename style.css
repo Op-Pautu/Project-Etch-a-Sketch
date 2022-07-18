@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+
+
+
+  /* .squares:hover {
+    color:red;
+  } */
+
+
+
+/* alternatively */
+/* * {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .container>div {
+    border: 1px solid black;
+    height: 25px;
+    width: 25px;
+  }
+  
+  .container>div:nth-child(17n+1) {
+    width: 100%;
+    border: 0;
+    height: 0;
+  }
+  */
