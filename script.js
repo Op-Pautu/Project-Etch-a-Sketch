@@ -26,7 +26,17 @@ function createSquares(number) {
       } else {
         square.style.cssText = "border: 1px solid black; height: 25px; width: 25px";
         square.addEventListener('mousemove', () => {
-          square.style.backgroundColor = getRandomColor();
+          if (square.style.backgroundColor == "") {
+            let color = getRandomColor();
+            square.style.backgroundColor = color;
+            square.style.opacity = ".10";
+            return square.style.backgroundColor;
+        }
+        // apply additional opacity at 10% intervals, hard stop at 1.0 (100%) IF background color is present
+          if ((square.style.backgroundColor !== "") && (square.style.opacity <= "0.90")) {
+              square.style.opacity = parseFloat(square.style.opacity) + .10;
+              return square.style.backgroundColor;
+          }    
         })
       }
       }
