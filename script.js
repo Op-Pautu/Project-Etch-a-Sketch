@@ -1,19 +1,11 @@
-// const btn = document.createElement('button');
-// const body = document.querySelector('body');
-// btn.style.color = "blue";
-// body.insertBefore(btn, container);
-
 const container = document.querySelector('.container');
-// const btn = document.createElement('button');
-// btn.style.color = 'teal';
-// container.insertBefore(btn, square);
 function createSquares(number) {
     while (document.querySelector("button") !== null) {
       document.querySelector("button").remove();
   }
     
     container.style.overflow = "hidden";
-    // container.style.width = "960px";
+    container.style.width = "960px";
     const total = (number * number) + number;
     const mod = number + 1;
    // yes using grid would be a lot earlier, but one must flex one's flexbox's skills
@@ -38,20 +30,14 @@ function createSquares(number) {
               return square.style.backgroundColor;
           }    
         })
+       
       }
       }
       createButton()
   }
   
   
-  // function getRandomColor() {
-  //   let o = Math.round;
-  //   let r = Math.random;
-  //   let s = 255;
-  //   return "rgb(" + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ')';
-  // }
-
-
+ 
 
   function createButton() {
     const buttonDiv = document.querySelector(".buttonDiv");
@@ -65,13 +51,13 @@ function createSquares(number) {
     resetButton.addEventListener('click', () => {
       document.querySelectorAll('.boxes').forEach(e => e.remove())
  
-      let userGridInput = parseInt(prompt("Please enter the number of grid squares per side (Max: 100): "));
-      if (userGridInput > 100) {
+      let userInput = parseInt(prompt("Please enter the number of grid squares per side (Max: 100): "));
+      if (userInput > 100) {
           alert("ERROR!  You specified a grid size larger than the max of 100.");
           return;
       }
      
-      createSquares(userGridInput);
+      createSquares(userInput);
       
      })
   }
