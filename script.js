@@ -24,7 +24,9 @@ function createSquares(number) {
         square.style.cssText = "border: 0; height: 0; width: 100%";
       } else {
         square.style.cssText = "border: 1px solid black; height: 25px; width: 25px";
-        
+        square.addEventListener('mousemove', () => {
+          square.style.backgroundColor = 'blue';
+        })
       }
       }
       }
