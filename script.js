@@ -1,3 +1,8 @@
+// const btn = document.createElement('button');
+// const body = document.querySelector('body');
+// btn.style.color = "blue";
+// body.insertBefore(btn, container);
+
 const container = document.querySelector('.container');
 // const btn = document.createElement('button');
 // btn.style.color = 'teal';
@@ -41,9 +46,14 @@ function createSquares(number) {
 
 
 
-
-
-
+  function createButton() {
+    const buttonDiv = document.querySelector(".buttonDiv");
+    const resetButton = document.createElement("button");
+    resetButton.textContent = "Reset Grid!";
+    resetButton.style.margin = "12px";
+    buttonDiv.appendChild(resetButton);
+  }
+createButton()
 
 createSquares(16);
 
